@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AlunosApp</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0284c7">
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+</head>
+<body>
+    <div class="container">
+        <header class="topo">
+            <div class="icone">🎓</div>
+            <div>
+                <h1>AlunosApp</h1>
+                <p>Gestão Escolar</p>
+            </div>
+        </header>
+
+        <div class="card">
+            <input id="nome" placeholder="Nome Completo">
+            <input id="email" placeholder="E-mail" type="email">
+            <input id="idade" type="number" placeholder="Idade" min="0">
+            <button id="btnSalvar" class="btn-salvar" onclick="salvar()">Salvar Aluno</button>
+        </div>
+
+        <div class="card tabela-box">
+            <table>
+                <thead>
+                    <tr><th>ID</th><th>Nome</th><th>Idade</th><th>Ações</th></tr>
+                </thead>
+                <tbody id="listaAlunos"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
